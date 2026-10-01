@@ -280,7 +280,7 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - name: Download the Linux server
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           pattern: linux-server-*
           path: dist
@@ -328,13 +328,13 @@ jobs:
       # Named, not the whole run: the step below releases every file it
       # finds, so only what belongs on the release comes down.
       - name: Download the macOS app
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: macos-app
           path: artifacts/macos-app
 
       - name: Download the Linux server
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           pattern: linux-server-*
           path: artifacts/linux-server
